@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Web Design</title>
+
+    <style>
+
+        /* Remove default spacing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            background-color: #444;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 40px;
+
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* ================= MAIN ================= */
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: 40px auto;
+        }
+
+        .container h2 {
+            text-align: center;
+            font-size: 30px;
+
+            margin-bottom: 30px;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+
+            background-color: white;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        /* Image */
+
+        .card img {
+
+            width: 100%;
+
+            height: 250px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        /* Card Content */
+
+        .content {
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+        .content h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+        .content p {
+
+            color: #555;
+
+            line-height: 1.5;
+
+            font-size: 16px;
+        }
+
+        /* ================= TABLET ================= */
+
+        @media (max-width: 768px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            .cards {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .card img {
+
+                height: 200px;
+
+            }
+
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 480px) {
+
+            header {
+
+                padding: 20px 10px;
+
+            }
+
+            header h1 {
+
+                font-size: 25px;
+
+            }
+
+            header p {
+
+                font-size: 15px;
+
+            }
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+            nav a {
+
+                font-size: 16px;
+
+            }
+
+            .container {
+
+                width: 90%;
+
+                margin: 25px auto;
+
+            }
+
+            .container h2 {
+
+                font-size: 25px;
+
+                margin-bottom: 20px;
+
+            }
+
+            /* One card per row */
+
+            .cards {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .card img {
+
+                height: 220px;
+
+            }
+
+            .content {
+
+                padding: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>Responsive Web Design</h1>
+
+        <p>One Web Page - Different Screen Sizes</p>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <div class="container">
+
+        <h2>Beautiful Places</h2>
+
+
+        <div class="cards">
+
+
+            <!-- CARD 1 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
+                    alt="Mountain">
+
+                <div class="content">
+
+                    <h3>Mountain</h3>
+
+                    <p>
+                        Beautiful mountain view
+                        surrounded by nature.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                    alt="Beach">
+
+                <div class="content">
+
+                    <h3>Beach</h3>
+
+                    <p>
+                        A peaceful beach with
+                        beautiful blue water.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+                    alt="Forest">
+
+                <div class="content">
+
+                    <h3>Forest</h3>
+
+                    <p>
+                        Green forest surrounded
+                        by beautiful nature.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
